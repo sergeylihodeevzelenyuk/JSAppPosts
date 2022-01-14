@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Task 21</title>
+    <script defer src="api.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body class="body">
+    <p class="server-error"></p>
+    <table class="table">
+      <caption class="table-caption">
+        User posts
+        <div class="spinner-container">
+          <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </caption>
+      <thead>
+        <tr>
+          <th class="th-id">Id</th>
+          <th class="th-title">Title</th>
+          <th class="th-body">Post</th>
+          <th class="th-actions">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="table-body"></tbody>
+      <tfoot class="table-footer">
+        <tr>
+          <td>Id</td>
+          <td>
+            <input class="input input-title" placeholder="Inpute title" />
+            <p class="input-error title-error">Title field cant be empty!</p>
+          </td>
+          <td>
+            <input class="input input-body" placeholder="Inpute you post" />
+            <p class="input-error body-error">Post field cant be empty!</p>
+          </td>
+          <td>
+            <button class="btn btn-update">
+              <object type="image/svg+xml" data="picture.svg">
+                <img src="./src/icon-edit.svg" alt="icon" class="edit_icon" />
+              </object>
+            </button>
+            <button class="btn btn-save">
+              <object type="image/svg+xml" data="picture.svg">
+                <img class="icon-save" src="./src/icon-save.svg" alt="icon" />
+              </object>
+            </button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+  <script id="post-template" type="text/template">
+    <tr class="tr-post {{class-id}}">
+      <td class="td-id">{{id}}</td>
+      <td class="td-title"><p>{{title}}</p></td>
+      <td class="td-body"><p>{{body}}</p></td>
+      <td>
+        <button class="btn btn-edit">
+          <object type="image/svg+xml" data="picture.svg">
+            <img
+            src="./src/icon-edit.svg"
+            alt="icon"
+            class="edit_icon"
+          />
+          </object>
+        </button>
+        <button class="btn btn-delete">
+          <object type="image/svg+xml" data="picture.svg">
+            <img
+            src="./src/icon-delete.svg"
+            alt="icon"
+            class="delete-icon"
+          />
+          </object>
+        </button>
+      </td>
+    </tr>
+  </script>
+</html>
